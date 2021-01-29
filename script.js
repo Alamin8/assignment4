@@ -1,22 +1,24 @@
-
 //First Class Increase
 document.getElementById('first-class-increase').addEventListener('click', function () {
     handleFirstClassFlight(true)
 })
+
 //first class decrease
 document.getElementById('first-class-decrease').addEventListener('click', function () {
     handleFirstClassFlight(false)
 })
+
 // Economy class increase
 document.getElementById('economy-class-increase').addEventListener('click', function () {
     handleEconomyClassFlight(true);
 })
+
 // Economy Class Decrease
 document.getElementById('economy-class-decrease').addEventListener('click', function () {
     handleEconomyClassFlight(false);
 })
 
-// first class
+// First Class Flight Input Counter by plus - minus Button
 function handleFirstClassFlight(isIncrease) {
     const firstClassCount = document.getElementById('first-class-count').value;
     const firstClassCountNumber = parseInt(firstClassCount);
@@ -31,7 +33,7 @@ function handleFirstClassFlight(isIncrease) {
     totalPrice()
 }
 
-//Economy 
+//Economy Flight Input Counter by plus - minus Button
 function handleEconomyClassFlight(isIncrease) {
     const economyClassCount = document.getElementById('economy-class-count').value;
     const economyClassCountNumber = parseInt(economyClassCount);
@@ -46,6 +48,7 @@ function handleEconomyClassFlight(isIncrease) {
     totalPrice()
 }
 
+// This function create for Calculate Total Amount. 
 function totalPrice() {
     const firstClassCount = document.getElementById('first-class-count').value;
     const firstClassCountNumber = parseInt(firstClassCount);
@@ -65,10 +68,33 @@ function totalPrice() {
     document.getElementById('total').innerText = total;
 }
 
-// Book Now
+// work this code to remove a section and open confrimation section
+document.getElementById('book-now').addEventListener('click', function () {
+    const confrimationMassage = document.getElementById('confrimation-massage-window');
+    const afterConfrimationNavbar = document.getElementById('after-cofrimation-navbar');
+    const afterConfrimationForm = document.getElementById('after-confrimation-form');
 
-document.getElementById('book-now').addEventListener('click', function(){
-    totalPrice()
-    const confrimationSubtotal=parseFloat(total.innerText) 
-    console.log(confrimationSubtotal)
+    confrimationMassage.style.display = 'block';
+    afterConfrimationNavbar.style.display = 'none';
+    afterConfrimationForm.style.display = 'none';
+    userinput()
 })
+
+// This function create for user input to show Confrimation Windows.
+function userinput() {
+    totalPrice()
+    const flyingFrom = document.getElementById('flying-from').value;
+    document.getElementById('Confrim-flying-from').innerText = flyingFrom;
+    const flyingTo = document.getElementById('flying-to').value;
+    document.getElementById('Confrim-flying-to').innerText = flyingTo;
+    const departure = document.getElementById('departure').value;
+    document.getElementById('confrim-departure').innerText = departure;
+    const back = document.getElementById('back').value;
+    document.getElementById('confrim-back').innerText = back;
+    const firstClassSeat = parseInt(document.getElementById('first-class-count').value);
+    const economyClassSeat = parseInt(document.getElementById('economy-class-count').value);
+    const totalSeat = firstClassSeat + economyClassSeat;
+    document.getElementById('confrim-seat').innerText = totalSeat;
+    const confrimationTotal = parseFloat(total.innerText)
+    document.getElementById('confrim-total').innerText = confrimationTotal;
+}

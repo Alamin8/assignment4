@@ -15,7 +15,7 @@
 
 <body>
     <!--Header and Menu Section-->
-    <header class="container">
+    <header id="after-cofrimation-navbar" class="container">
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -27,25 +27,25 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <section id="after-confrimation-form" class="main-content container">
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                <input id="flying-from" class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                <input id="flying-to" class="inp-style" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                        <input id="departure" class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input id="back" class="inp-style" type="date" name="">
                 </div>
             </div>
             <div class="input-group f-class">
@@ -54,17 +54,20 @@
                     <input id="first-class-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div>
-                    <p class="plus-minus-btn"><span id="first-class-increase" class="plus-btn">+</span> <span id="first-class-decrease" class="minus-btn">-</span></p>
+                    <p class="plus-minus-btn">
+                        <span id="first-class-decrease" class="minus-btn">-</span>
+                        <span id="first-class-increase" class="plus-btn">+</span>
+                    </p>
                 </div>
             </div>
-            
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
                     <input id="economy-class-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div>
-                   <p class="plus-minus-btn"> <span id="economy-class-increase" class="plus-btn">+</span> <span id="economy-class-decrease" class="minus-btn">-</span></p>
+                    <p class="plus-minus-btn"><span id="economy-class-decrease" class="minus-btn">-</span> <span
+                            id="economy-class-increase" class="plus-btn">+</span> </p>
                 </div>
             </div>
             <div class="calculations">
@@ -97,13 +100,41 @@
             </div>
             <button id="book-now" class="btn-style">Book Now</button>
         </div>
-
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                voluptatibus quam</p>
         </div>
     </section>
 
+    <!-- Confrimation Window Section -->
+    <section id="confrimation-massage-window" class="container">
+        <div class="confirmation-window-center">
+            <div class="book-confirmation">
+                <h1 class="success-heading">Flight Booking Succefully !!! </h1>
+                <p>
+                    From:<span id="Confrim-flying-from" class="confrimation-topic-value">Dhaka, Bangladesh</span>
+                    To:<span id="Confrim-flying-to" class="confrimation-topic-value">New York, United States</span>
+                </p>
+                <p>
+                    Departure:</span><span id="confrim-departure" class="confrimation-topic-value"> mm/dd/yyyy</span>
+                    Return:<span id="confrim-back" class="confrimation-topic-value">mm/dd/yyyy</span>
+                </p>
+                <p>
+                    Seats: <span id="confrim-seat" class="confrimation-topic-value"></span>
+                </p>
+                <div class="confrimation-total-amount">
+                    <div class="left">
+                        <h1>Total Amount:</h1>
+                    </div>
+                    <div class="right">
+                        <h1>$ <span id="confrim-total" class="total-amount-value">0</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 

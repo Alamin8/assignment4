@@ -1,83 +1,98 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
-    background:url("images/bg.png");
+    background: url("images/bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
 }
 
-nav{
+nav {
     height: 50px;
     width: 100%;
     padding: 20px 0;
 }
-.container{
+
+.container {
     width: 1200px;
     max-width: 85%;
     margin: 0 auto;
 }
-nav ul{
+
+nav ul {
     display: flex;
     justify-content: flex-end;
     margin: 0px 6px;
 }
-nav ul li a{
+
+nav ul li a {
     color: #fff;
     padding: 10px;
     text-transform: uppercase;
 }
-nav ul li a:hover, a.active{
+
+nav ul li a:hover, a.active {
     background-color: #3352F2;
     border-radius: 5px;
 }
-.main-content{
+
+.main-content {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 70px;
     align-items: center;
 }
-.booking-form{
+
+.booking-form {
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 25px;
     border-radius: 5px;
     float: left;
 }
-.booking-form h3{
+
+.booking-form h3 {
     margin: 10px 0px;
 }
-.booking-form  .input-group{
+
+.booking-form .input-group {
     margin: 10px 0;
 }
-.f-class{
+
+.f-class {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.inp-width{
+
+.inp-width {
     min-width: 300px;
 }
+
 .plus-minus-btn {
     margin-top: 16px;
 }
-.plus-btn{
+
+.plus-btn {
     width: 10px;
     border-radius: 15px;
     color: #3352F2;
     background-color: #F3F5FF;
     font-size: 21px;
     padding: 3px 10px;
-    outline:white;
+    outline: white;
+    user-select: none;
 }
-.minus-btn{
+
+.minus-btn {
     width: 10px;
     border-radius: 15px;
     color: #3352F2;
@@ -85,23 +100,29 @@ nav ul li a:hover, a.active{
     font-size: 21px;
     padding: 3px 12px;
     margin-left: 5px;
+    user-select: none;
 }
-.plus-btn:hover{
+
+.plus-btn:hover {
     background-color: #e3e7fd;
     cursor: pointer;
 }
-.minus-btn:hover{
+
+.minus-btn:hover {
     background-color: #e3e7fd;
     cursor: pointer;
 }
-.booking-form  .calculations{
+
+.booking-form .calculations {
     margin: 10px 0;
 }
-.booking-form  .calculations p{
+
+.booking-form .calculations p {
     font-weight: 500;
     margin-bottom: 10px;
 }
-.booking-form input{
+
+.booking-form input {
     width: 100%;
     display: block;
     padding: 10px;
@@ -111,16 +132,19 @@ nav ul li a:hover, a.active{
     border-radius: 4px;
     margin: 10px 0;
 }
-.booking-form .inputs{
+
+.booking-form .inputs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
-.booking-content{
+
+.booking-content {
     color: #fff;
     width: 80%;
 }
-.booking-content h1{
+
+.booking-content h1 {
     font-size: 70px;
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
@@ -128,7 +152,7 @@ nav ul li a:hover, a.active{
     margin-bottom: 25px;
 }
 
-.btn-style{
+.btn-style {
     display: block;
     width: 100%;
     padding: 10px;
@@ -136,9 +160,64 @@ nav ul li a:hover, a.active{
     border: none;
     color: #fff;
     font-weight: 500;
-    background-color:  #3352F2;
+    background-color: #3352F2;
 }
-.amount{
+
+.amount {
     display: flex;
     justify-content: space-between;
+}
+
+#confrimation-massage {
+    display: none;
+}
+
+.confirmation-window-center {
+    padding: 250px;
+}
+
+.book-confirmation {
+    background-color: #fff;
+    width: 550px;
+    padding: 55px 52px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 8px #7ca7c6;
+}
+
+.book-confirmation p {
+    line-height: 30px;
+    color: #2091c9;
+    font-weight: bold;
+    margin: 5px 5px;
+    font-size: 17px;
+}
+
+.success-heading {
+    color: #2091c9;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.confrimation-topic-value {
+    color: rgb(224, 138, 67);
+    background-color: #F3F5FF;
+    margin: 5px 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.confrimation-total-amount {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confrimation-total-amount h1, span {
+    color: #2091c9;
+    font-weight: bold;
+}
+
+.total-amount-value {
+    margin-right: 50px;
 }
