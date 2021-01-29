@@ -70,7 +70,7 @@ function totalPrice() {
 
 // work this code to remove a section and open confrimation section
 document.getElementById('book-now').addEventListener('click', function () {
-    const confrimationMassage = document.getElementById('confrimation-massage-window');
+    const confrimationMassage = document.getElementById('confrimation-massage');
     const afterConfrimationNavbar = document.getElementById('after-cofrimation-navbar');
     const afterConfrimationForm = document.getElementById('after-confrimation-form');
 
