@@ -61,10 +61,10 @@ function totalPrice() {
     const subTotal = firstClassTotal + economyClassTotal;
     document.getElementById('sub-total').innerText = subTotal;
 
-    const tax = (subTotal * 10) / 100;
-    document.getElementById('tax').innerText = tax;
+    const vat = (subTotal * 10) / 100;
+    document.getElementById('vat').innerText = vat;
 
-    const total = subTotal + tax;
+    const total = subTotal + vat;
     document.getElementById('total').innerText = total;
 }
 
